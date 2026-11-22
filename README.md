@@ -111,6 +111,3 @@ http://localhost:8501
 4. View the extracted LaTeX code.
 5. Preview the rendered mathematical expression.
 
-## Environment Variables
-
-| Variable | Description
