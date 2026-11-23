@@ -4,11 +4,18 @@ from dotenv import load_dotenv
 
 load_dotenv()
 
-my_api_key = os.getenv("GROQ_API_KEY")
+def get_client():
 
-if not my_api_key:
-    raise ValueError("API key not found.")
+       my_api_key = os.getenv("GROQ_API_KEY")
 
-client = OpenAI(api_key = my_api_key, base_url='https://api.groq.com/openai/v1')
+       if not my_api_key:
+             raise ValueError("API key not found.")
 
-model = "qwen/qwen3.8-27b"
+       client = OpenAI(api_key = my_api_key, 
+                       base_url='https://api.groq.com/openai/v1')
+
+       return client
+
+   
+
+
